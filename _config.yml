@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Random stuff to remember
+author: Moritz Weber
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   This site is a personal storage for stuff like code snippets, scripts, workarounds etc.
