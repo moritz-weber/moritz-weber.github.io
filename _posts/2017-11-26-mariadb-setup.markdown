@@ -3,6 +3,7 @@ layout: post
 title:  "Setup MariaDB (with password reset)"
 date:   2017-11-26 22:22:22 +0200
 tags:   nextcloud owncloud ubuntu mariadb
+categories: howto
 ---
 Seen this a tousand times and keeping to search for it every time. This is just a shortcut (and backup) for me.
 

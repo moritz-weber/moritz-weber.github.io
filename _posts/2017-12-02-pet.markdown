@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "pet : CLI Snippet Manager"
+date:   2017-12-02 11:11:11 +0200
+categories: software
+tags:   tools command-line software
+---
+[pet](https://github.com/knqyf263/pet) is a great tool for storing snippets that you don't use frequently enough to remember.
+An example for such a snippet would be:
+
+{% highlight bash %}
+for file in <filter=*>; do convert $file -resize <resolution=800x600> $file; done
+{% endhighlight %}
+
+I use this quite often, but done always get the bash loop syntax right.
+pet allows to insert variables with default values (e.g. `<filter=*>`) which is very handy.
+[Gist](http://gist.github.com/) synchronization is comfortable too, when using different machines or for backups.

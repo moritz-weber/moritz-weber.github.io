@@ -2,8 +2,8 @@
 layout: post
 title:  "Connect to globally available Nextcloud/ownCloud via LAN"
 date:   2017-10-25 22:22:22 +0200
-categories: script
 tags:   nextcloud owncloud ubuntu
+categories: howto
 ---
 Having your Nextcloud/ownCloud instance available over the internet is a great thing. You can synchronize and access your files from all around the globe.
 
