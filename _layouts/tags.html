@@ -26,12 +26,6 @@ layout: default
   </div>
 
   <ul class="tags">
-    <form method="get" action="https://duckduckgo.com/">
-      <input type="hidden" name="sites" value="moritz-weber.github.io"/>
-      <input class="submit" type="submit" value="DuckDuckGo Search" />
-      <input class="form-control" name="q" value="" placeholder="search" type="text">
-    </form>
-
     {% for tag in tags %}
       {% assign t = tag | first %}
       {% assign posts = tag | last %}
