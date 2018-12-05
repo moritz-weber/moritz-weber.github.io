@@ -1,0 +1,64 @@
+div.trigger {
+  width: 150px;
+}
+
+div#tags-container {
+  display: grid;
+  grid-template-columns: auto 150px;
+  grid-column-gap: 20px;
+
+  a.tag {
+    color: $grey-color-dark;
+    font-weight: bold;
+    display: block;
+    padding: 2px 2px 0;
+    line-height: 17px;
+    margin-bottom: 8px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  a:target {
+    background: #e8e8e8;
+
+
+  }
+}
+
+ul.tags {
+  margin: 0;
+
+  form {
+    margin-bottom: 10px;
+
+    input.submit {
+      display: none;
+    }
+
+    input.form-control {
+      width: 140px;
+    }
+  }
+
+  li {
+    list-style: none;
+    margin: 3px 0;
+  }
+}
+
+
+
+ul.tag-posts {
+  margin: 0 0 20px 10px;
+
+  li {
+    list-style: none;
+    margin: 3px 0;
+
+    .date {
+      color: $grey-color;
+    }
+  }
+}
