@@ -22,52 +22,57 @@ div.trigger {
 
 .subsection {
   margin-bottom: 30px;
+  display: grid;
 
-  .head {
-    display: grid;
+  grid-template-areas:
+    "time title"
+    "time subtitle"
+    "time description"
+    "time tech";
 
+  grid-template-columns: 120px 1fr;
+
+  @include media-query($on-palm) {
     grid-template-areas:
-      "time title"
-      "time subtitle";
+      "time"
+      "title"
+      "subtitle"
+      "description"
+      "tech";
 
-    grid-template-columns: 120px 1fr;
-
-    .time {
-      grid-area: time;
-    }
-
-    .title {
-      grid-area: title;
-    }
-
-    .type {
-      grid-area: subtitle;
-    }
+    grid-template-columns: 1fr;
   }
 
   .time {
-    // font-size: 110%;
-    // font-weight: 600;
-    line-height: 28.8px;
+    grid-area: time;
+    line-height: 19px;
+    padding-top: 4px;
+  }
+
+  .title {
+    grid-area: title;
+    font-size: 19px;
+    line-height: 1;
+    padding: 4px 0;
+    font-weight: 600;
   }
 
   .type {
+    grid-area: subtitle;
     color: $grey-color;
     line-height: 1;
   }
 
-  .title {
-    font-size: 120%;
-    font-weight: 600;
+  .description {
+    grid-area: description;
+  }
+
+  .tech {
+    grid-area: tech;
   }
 
   .description {
     margin: 10px 0;
-    padding-left: 120px;
-  }
-
-  .tech {
-    padding-left: 120px;
   }
 }
 
@@ -78,18 +83,20 @@ div.trigger {
   padding: 1px 12px;
   display: inline-block;
   line-height: 26px;
-  margin-right: 2px;
+  margin: 0 2px 4px 0;
 }
 
 .afk {
   display: flex;
   justify-content: space-between;
+  margin: 0 -5px;
 
   .activity {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 110%;
+    padding: 5px;
   }
 
   img {
@@ -161,7 +168,9 @@ div.trigger {
 
   #name {
     font-family: $secondary-font-family;
-    font-size: 350%;
+    font-size: 56px;
+    line-height: 50px;
+    padding: 16px 0;
     color: $brand-color;
     font-weight: 600;
     display: block;

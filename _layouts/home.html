@@ -4,25 +4,23 @@ layout: default
 
 <div class="home">
     <div class="section first">
-      <span id="name">Moritz Weber</span>
-      <span class="about">
-        Ich bin Python-Enthusiast und interessiere mich sowohl für Backend-Entwicklung als auch für Data Science und Machine Learning.
-        Gerade schreibe ich meine Masterarbeit am Karlsruher Institut für Technologie.
-        Nebenbei lerne ich momentan TDD und bastele mit Flutter an verschiedenen kleinen Apps.
-      </span>
+        <span id="name">Moritz Weber</span>
+        <span class="about">
+            Ich bin Python-Enthusiast und interessiere mich sowohl für Backend-Entwicklung als auch für Data Science und Machine Learning.
+                    Gerade schreibe ich meine Masterarbeit am Karlsruher Institut für Technologie.
+                    Nebenbei lerne ich momentan TDD und bastele mit Flutter an verschiedenen kleinen Apps.
+        </span>
     </div>
     <div class="section">
         <h1>Praktische Erfahrung</h1>
         {% for job in site.data.experience %}
             <div class="subsection">
-                <div class="head">
-                    <span class="time">{{ job.time }}</span>
-                    <span class="type">{{ job.organization }}</span>
-                    <span class="title">
-                        {{ job.title }}
-                    </span>
-                </div>
-                <div></div>
+                <span class="time">{{ job.time }}</span>
+                <span class="title">
+                    {{ job.title }}
+                </span>
+                <span class="type">{{ job.organization }}</span>
+
 
                 <div class="description">
                     {{ job.description }}
@@ -43,14 +41,14 @@ layout: default
         <h1>Projekte</h1>
         {% for project in site.data.projects %}
             <div class="subsection">
-                <div class="head">
-                    <span class="time">{{ project.time }}</span>
-                    <span class="type">
-                        {{ project.type }} // {{ project.organization }}
-                    </span>
-                    <div class="title">
-                        {{ project.title }}
-                    </div>
+                <span class="time">{{ project.time }}</span>
+                <span class="type">
+                    {{ project.type }}
+                    //
+                    {{ project.organization }}
+                </span>
+                <div class="title">
+                    {{ project.title }}
                 </div>
 
                 <div class="description">
@@ -69,23 +67,23 @@ layout: default
     </div>
 
     <div class="section">
-      <h1 title="Away From Keyboard">AFK</h1>
-      <div class="afk">
-        <div class="activity">
-          <img src="images/fussball.jpg">
-          <span>Fußball</span>
-        </div>
+        <h1 title="Away From Keyboard">AFK</h1>
+        <div class="afk">
+            <div class="activity">
+                <img src="images/fussball.jpg">
+                <span>Fußball</span>
+            </div>
 
-        <div class="activity">
-          <img src="images/full-force.jpg">
-          <span>Laute Musik</span>
-        </div>
+            <div class="activity">
+                <img src="images/full-force.jpg">
+                <span>Laute Musik</span>
+            </div>
 
-        <div class="activity">
-          <img src="images/wandern.jpg">
-          <span>Wandern</span>
+            <div class="activity">
+                <img src="images/wandern.jpg">
+                <span>Wandern</span>
+            </div>
         </div>
-      </div>
     </div>
 
 </div>
