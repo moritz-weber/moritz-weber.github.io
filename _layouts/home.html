@@ -3,35 +3,89 @@ layout: default
 ---
 
 <div class="home">
+    <div class="section first">
+      <span id="name">Moritz Weber</span>
+      <span class="about">
+        Ich bin Python-Enthusiast und interessiere mich sowohl für Backend-Entwicklung als auch für Data Science und Machine Learning.
+        Gerade schreibe ich meine Masterarbeit am Karlsruher Institut für Technologie.
+        Nebenbei lerne ich momentan TDD und bastele mit Flutter an verschiedenen kleinen Apps.
+      </span>
+    </div>
+    <div class="section">
+        <h1>Praktische Erfahrung</h1>
+        {% for job in site.data.experience %}
+            <div class="subsection">
+                <div class="head">
+                    <span class="time">{{ job.time }}</span>
+                    <span class="type">{{ job.organization }}</span>
+                    <span class="title">
+                        {{ job.title }}
+                    </span>
+                </div>
+                <div></div>
 
-  <ul>
-  {% for project in site.data.projects %}
-    <li>
-      {{ project.title }} | 
-      {% for lang in project.languages %}
-          <img src="assets/img/{{ lang | slugify }}.svg" title="{{ lang }}" class="icon">
-      {% endfor %}
-    </li>
-  {% endfor %}
-  </ul>
+                <div class="description">
+                    {{ job.description }}
+                </div>
+                <div class="tech">
+                    {% for lang in job.languages %}
+                        <span class="language">{{ lang }}</span>
+                    {% endfor %}
+                    {% for framework in job.frameworks %}
+                        <span class="framework">{{ framework }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
-  {{ content }}
+    <div class="section">
+        <h1>Projekte</h1>
+        {% for project in site.data.projects %}
+            <div class="subsection">
+                <div class="head">
+                    <span class="time">{{ project.time }}</span>
+                    <span class="type">
+                        {{ project.type }} // {{ project.organization }}
+                    </span>
+                    <div class="title">
+                        {{ project.title }}
+                    </div>
+                </div>
 
-  <h1 class="page-heading">Posts</h1>
-  
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+                <div class="description">
+                    {{ project.description }}
+                </div>
+                <div class="tech">
+                    {% for lang in project.languages %}
+                        <span class="language">{{ lang }}</span>
+                    {% endfor %}
+                    {% for framework in project.frameworks %}
+                        <span class="framework">{{ framework }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="section">
+      <h1 title="Away From Keyboard">AFK</h1>
+      <div class="afk">
+        <div class="activity">
+          <img src="images/fussball.jpg">
+          <span>Fußball</span>
+        </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+        <div class="activity">
+          <img src="images/full-force.jpg">
+          <span>Laute Musik</span>
+        </div>
+
+        <div class="activity">
+          <img src="images/wandern.jpg">
+          <span>Wandern</span>
+        </div>
+      </div>
+    </div>
 
 </div>

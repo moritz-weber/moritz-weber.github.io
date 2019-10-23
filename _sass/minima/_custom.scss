@@ -1,3 +1,7 @@
+@import "./fa/fontawesome.scss";
+@import "./fa/solid.scss";
+@import "./fa/brands.scss";
+
 div.trigger {
   width: 150px;
 }
@@ -22,8 +26,6 @@ div#tags-container {
 
   a:target {
     background: #e8e8e8;
-
-
   }
 }
 
@@ -48,8 +50,6 @@ ul.tags {
   }
 }
 
-
-
 ul.tag-posts {
   margin: 0 0 20px 10px;
 
@@ -60,5 +60,171 @@ ul.tag-posts {
     .date {
       color: $grey-color;
     }
+  }
+}
+
+.section {
+  margin-bottom: 50px;
+
+  h1 {
+    border-bottom: 1px solid $text-color;
+    font-family: $secondary-font-family;
+  }
+
+  &.dark {
+    background: $grey-color-dark;
+    color: #ffffff;
+  }
+}
+
+.subsection {
+  margin-bottom: 30px;
+
+  .head {
+    display: grid;
+
+    grid-template-areas:
+      "time title"
+      "time subtitle";
+
+    grid-template-columns: 120px 1fr;
+
+    .time {
+      grid-area: time;
+    }
+
+    .title {
+      grid-area: title;
+    }
+
+    .type {
+      grid-area: subtitle;
+    }
+  }
+
+  .time {
+    // font-size: 110%;
+    // font-weight: 600;
+    line-height: 28.8px;
+  }
+
+  .type {
+    color: $grey-color;
+    line-height: 1;
+  }
+
+  .title {
+    font-size: 120%;
+    font-weight: 600;
+  }
+
+  .description {
+    margin: 10px 0;
+    padding-left: 120px;
+  }
+
+  .tech {
+    padding-left: 120px;
+  }
+}
+
+.language,
+.framework {
+  background: $light;
+  border-radius: 14px;
+  padding: 1px 12px;
+  display: inline-block;
+  line-height: 26px;
+  margin-right: 2px;
+}
+
+.afk {
+  display: flex;
+  justify-content: space-between;
+
+  .activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 110%;
+  }
+
+  img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+}
+
+.site-nav {
+  a {
+    margin-left: 5px;
+    padding: 2px;
+    font-size: 120%;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.mail {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-envelope);
+  }
+}
+
+.github {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-github);
+  }
+}
+
+.gitlab {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-gitlab);
+  }
+}
+
+.xing {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-xing);
+  }
+}
+
+.linkedin {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-linkedin);
+  }
+}
+
+.section.first {
+  margin-bottom: 80px;
+
+  #name {
+    font-family: $secondary-font-family;
+    font-size: 350%;
+    color: $brand-color;
+    font-weight: 600;
+    display: block;
+  }
+
+  .about {
+    font-size: 120%;
   }
 }
