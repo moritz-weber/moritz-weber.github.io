@@ -4,6 +4,17 @@ layout: default
 
 <div class="home">
 
+  <ul>
+  {% for project in site.data.projects %}
+    <li>
+      {{ project.title }} | 
+      {% for lang in project.languages %}
+          <img src="assets/img/{{ lang | slugify }}.svg" title="{{ lang }}" class="icon">
+      {% endfor %}
+    </li>
+  {% endfor %}
+  </ul>
+
   {{ content }}
 
   <h1 class="page-heading">Posts</h1>
