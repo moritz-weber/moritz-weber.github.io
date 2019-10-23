@@ -1,18 +1,18 @@
 - time: 2019
   type: Masterarbeit
-  title: "Detektion und Korrektur von Messfehlern in Energiezeitreihen mit Methoden des Data Minings"
+  title: "Detektion und Korrektur von Messfehlern in Energiezeitreihen"
+  description: "Vergleich verschiedener bestehender Methoden und Entwicklung eines eigenen Systems zur automatischen Fehlerkorrektur in Smart-Meter-Zeitreihen"
   organization: KIT - Institut für Angewandte Informatik
   languages: 
     - Python
     - MATLAB
   frameworks:
     - pytorch
-    - Tensorflow
-  description: "Vergleich verschiedener bestehender Methoden und Entwicklung eines eigenen Systems zur automatischen Fehlerkorrektur in Smart-Meter-Zeitreihen"
 
 - time: 2018
   type: Praktikum
   title: "Mobile Roboter"
+  description: "Umsetzung der Objekterkennung und -lokalisierung auf Basis einer MobileNet-Implementierung für einen sechsbeinigen Roboter mit dem Ziel, einen anderen Roboter zu verfolgen"
   organization: FZI Forschungszentrum Informatik am KIT
   languages: 
     - Python
@@ -20,15 +20,17 @@
     - ROS
     - Caffe
     - OpenCV
-  description: "Umsetzung der Objekterkennung und -lokalisierung auf Basis einer MobileNet-Implementierung für einen sechsbeinigen Roboter mit dem Ziel, einen anderen Roboter zu verfolgen"
 
-- time:
-  type: 
-  title:
-  organization:
+- time: 2018
+  type: Praktikum
+  title: Computer Vision für Mensch-Maschine-Interaktion
+  description: "Entwicklung des Bahn-Detektors für eine Android-App zur Erkennung von Straßenbahnen in Karlsruhe"
+  organization: KIT - Institut für Anthropomatik und Robotik
   languages:
+    - C++
+    - Java
   frameworks:
-  description:
+    - OpenCV
 
 # - time:
 #   title:

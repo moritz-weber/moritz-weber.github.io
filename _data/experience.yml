@@ -1,0 +1,19 @@
+- time: Seit 06/17
+  title: "Geschäftsführer"
+  description: "Ausarbeitung einer Neuausrichtung des Unternehmens, operative und strategische Leitung, Personalverantwortung von 6-7 Mitarbeitern, Leitung der halbjährigen Produktion von Absolventenbüchern"
+  organization: "AWIKA Gesellschaft für Absolventenmarketing mbH"
+  languages:
+  frameworks:
+
+- time: 07/14 - 08/19
+  title: "Full Stack Developer"
+  description: "Entwicklung des Online-Formulars zur Erfassung der Absolventendaten, Entwicklung interner Web-Anwendungen und Optimierung von Arbeitsabläufen"
+  organization: "AWIKA Gesellschaft für Absolventenmarketing mbH"
+  languages: 
+    - Python
+    - HTML
+    - SASS
+    - JS
+  frameworks: 
+    - Django
+    - jQuery
